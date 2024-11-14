@@ -1,8 +1,8 @@
 /**
  * @param {number} numRows
  * @return {number[][]}
+ * 2024/11/14 第一次看 掌握度90% 學到二維陣列的使用
  */
-//2024/11/14 第一次看 掌握度90% 學到二維陣列的使用
 var generate = function (numRows) {
   var result = [];
   //直向columns跑回圈

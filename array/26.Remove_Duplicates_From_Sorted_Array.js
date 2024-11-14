@@ -1,4 +1,8 @@
-//2024/11/13第一次做 掌握度80% 學到雙指針法
+/**
+ * @param {number[]} nums
+ * @return {number}
+ * 2024/11/13第一次做 掌握度80% 學到雙指針法
+ */
 var removeDuplicates = function (nums) {
   if (nums.length === 0) return 0;
   let i = 0;

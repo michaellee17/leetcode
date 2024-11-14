@@ -1,8 +1,8 @@
 /**
  * @param {number} rowIndex
  * @return {number[]}
+ * 2024/11/14 第一次看 掌握度90% 同118
  */
-//2024/11/14 第一次看 掌握度90% 同118
 var getRow = function (rowIndex) {
   var result = [];
   for (var i = 0; i < rowIndex + 1; i++) {

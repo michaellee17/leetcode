@@ -2,8 +2,8 @@
  * @param {number[]} nums
  * @param {number} target
  * @return {number[]}
+ * 2024//11/13 第一次看 掌握度80% 學到雙重迴圈 差值陣列比較 掌握度70&
  */
-//2024//11/13 第一次看 掌握度80% 學到雙重迴圈 差值陣列比較 掌握度70&
 //解法1 雙迴圈暴力解 運行時間49ms
 // var twoSum = function (nums, target) {
 //   for (let i = 0; i < nums.length; i++) {
