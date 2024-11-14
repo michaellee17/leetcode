@@ -24,7 +24,6 @@ var containsNearbyDuplicate = function (nums, k) {
     //判斷是否有在map裡面
     //且以下面條件為例子 i=3  nums[3]=1  map.get(1)=0  3-0=3<= k=3
     if (map.has(nums[i]) && i - map.get(nums[i]) <= k) {
-      console.log(`output->map`, map);
       return true;
     }
     //沒有符合條件的話就set進map

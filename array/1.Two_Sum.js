@@ -25,7 +25,6 @@ var twoSum = function (nums, target) {
     } else {
       seen[nums[i]] = i + 1;
     }
-    console.log(`output->seen`, seen);
   }
   return [];
 };
