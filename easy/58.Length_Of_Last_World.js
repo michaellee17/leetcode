@@ -1,6 +1,7 @@
 /**
  * @param {string} s
  * @return {number}
+ * Tag: String
  * 2024/11/15 第一次看 掌握度100%
  */
 var lengthOfLastWord = function (s) {

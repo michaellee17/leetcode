@@ -1,6 +1,7 @@
 /**
  * @param {number[]} prices
  * @return {number}
+ * Tag: Array
  * 2024/11/14 第一次看 掌握度80%  單迴圈比較
  * /math.max 用法 => 取最大值
  * 思路整理:

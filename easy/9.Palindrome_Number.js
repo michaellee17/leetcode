@@ -1,6 +1,7 @@
 /**
  * @param {number} x
  * @return {boolean}
+ * Tag: Math
  * 2024/12/04 第一次看 掌握度80% 學到Math.floor()的用法
  */
 var isPalindrome = function (x) {

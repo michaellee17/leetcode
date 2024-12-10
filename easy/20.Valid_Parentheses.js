@@ -1,6 +1,7 @@
 /**
  * @param {string} s
  * @return {boolean}
+ * Tag: String
  * 2020/11/15 第一次做 掌握度70% 多次刪除 條件判斷時同時操作刪除元素
  */
 var isValid = function (s) {

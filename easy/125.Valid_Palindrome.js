@@ -1,6 +1,7 @@
 /**
  * @param {string} s
  * @return {boolean}
+ * Tag: String
  * 2024/11/15 第一次看 掌握度60%
  */
 var isPalindrome = function (s) {

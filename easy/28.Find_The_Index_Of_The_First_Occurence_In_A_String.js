@@ -2,6 +2,7 @@
  * @param {string} haystack
  * @param {string} needle
  * @return {number}
+ * Tag: String
  * 2024/11/15 第一次 掌握度100%
  * string.indexOf() 會回傳第一個找到的字串位置
  * indexOf(searchString)

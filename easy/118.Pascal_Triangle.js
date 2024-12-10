@@ -1,7 +1,8 @@
 /**
  * @param {number} numRows
  * @return {number[][]}
- * 2024/11/14 第一次看 掌握度90% 學到二維陣列的使用
+ * Tag: Array
+ * 2024/11/14 第一次看 掌握度90% 學到二維陣列的使用 雙回圈的使用
  */
 var generate = function (numRows) {
   var result = [];
@@ -22,4 +23,4 @@ var generate = function (numRows) {
   return result;
 };
 
-console.log(`output->generate(6)`, generate(12));
+console.log(`output->generate`, generate(5));

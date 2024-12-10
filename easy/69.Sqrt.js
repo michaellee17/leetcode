@@ -1,6 +1,7 @@
 /**
  * @param {number} x
  * @return {number}
+ * Tag: Math
  * 2024/12/06 第一次看 掌握度80% 二分法 binary search early return
  */
 var mySqrt = function (x) {

@@ -4,6 +4,7 @@
  *     this.val = val;
  *     this.next = null;
  * }
+ * Tag: Linked List Hash_table
  * 2024/12/03 第一次看 掌握度60趴 快慢指针 了解linkedlist資料結構
  */
 

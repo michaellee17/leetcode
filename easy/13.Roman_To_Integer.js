@@ -1,6 +1,7 @@
 /**
  * @param {string} s
  * @return {number}
+ * Tag: String HashTable
  * 2024/11/14 第一次看 熟練度90%
  * 思路:自製對應表 前後比較大小 從後面開始比
  */

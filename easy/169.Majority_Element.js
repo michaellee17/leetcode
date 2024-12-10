@@ -1,6 +1,7 @@
 /**
  * @param {number[]} nums
  * @return {number}
+ * Tag: Array
  * 2024/11/14 第一次看 熟練度70%
  * 思路:majority element是指在一個數組中出現次數超過一半的元素 所以假設長度是n 那麼majority element的次數一定大於n/2
  *

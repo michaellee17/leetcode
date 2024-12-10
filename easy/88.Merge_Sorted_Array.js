@@ -4,6 +4,7 @@
  * @param {number[]} nums2
  * @param {number} n
  * @return {void} Do not return anything, modify nums1 in-place instead.
+ * Tag: Array
  * 2024/11/14 第一次看 掌握度70%
  * 語法splice()
  * 第一個參數是移除或加入的起始位置

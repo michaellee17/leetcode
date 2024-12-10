@@ -1,6 +1,7 @@
 /**
  * @param {string} columnTitle
  * @return {number}
+ * Tag: Math
  * 2024/11/15 第一次看 掌握度90%
  * 同168 但是是反過來的
  */

@@ -1,6 +1,7 @@
 /**
  * @param {string[]} strs
  * @return {string}
+ * Tag: String
  * 2024/11/14 第一次做 掌握度70% 多次刪除
  */
 var longestCommonPrefix = function (strs) {
@@ -8,7 +9,6 @@ var longestCommonPrefix = function (strs) {
   if (strs.length === 1) return strs[0];
   //假設第一個字串為prefix
   let prefix = strs[0];
-  console.log(`output->prefix`, prefix);
   //從第二個字串開始比較
   for (let i = 1; i < strs.length; i++) {
     //如果不是從頭開始的話就把prefix的最後一個字元拿掉
