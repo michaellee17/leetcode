@@ -9,9 +9,6 @@ var islandPerimeter = function (grid) {
   let rows = grid.length;
   let cols = grid[0].length;
 
-  console.log(`output->rows`, rows);
-  console.log(`output->cols`, cols);
-
   for (let i = 0; i < rows; i++) {
     for (let j = 0; j < cols; j++) {
       if (grid[i][j] === 1) {
@@ -31,12 +28,12 @@ var islandPerimeter = function (grid) {
 };
 
 // 測試範例
-// console.log(
-//   islandPerimeter([
-//     [0, 1, 0, 0],
-//     [1, 1, 1, 0],
-//     [0, 1, 0, 0],
-//     [1, 1, 0, 0],
-//   ])
-// );
+console.log(
+  islandPerimeter([
+    [0, 1, 0, 0],
+    [1, 1, 1, 0],
+    [0, 1, 0, 0],
+    [1, 1, 0, 0],
+  ])
+);
 console.log(`output->islandPerimeter([[1]])`, islandPerimeter([[1, 0]]));
