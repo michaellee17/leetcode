@@ -1,6 +1,8 @@
 /**
  * @param {string[]} words
  * @return {string[]}
+ * Tag: Array, String
+ * 2024/12/11 第一次看 掌握度90% Set觀念
  */
 var findWords = function (words) {
   const row1 = new Set("qwertyuiopQWERTYUIOP");
