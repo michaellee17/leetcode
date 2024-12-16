@@ -4,6 +4,7 @@
  * @return {number}
  * Tag: Array
  * 2024/11/13 第一次看 掌握度70% 交叉比對
+ * 2024/12/16 第二次看 掌握度90% 根據範例去假設並驗證
  */
 
 var searchInsert = function (nums, target) {

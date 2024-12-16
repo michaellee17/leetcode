@@ -8,6 +8,7 @@
  * indexOf(searchString)
  * indexOf(searchString, position)
  * array.indexOf() 會回傳第一個找到的元素位置
+ * 2024/12/16 第二次看 掌握度100%
  */
 var strStr = function (haystack, needle) {
   return haystack.indexOf(needle);

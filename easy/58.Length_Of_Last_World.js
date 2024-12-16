@@ -3,6 +3,7 @@
  * @return {number}
  * Tag: String
  * 2024/11/15 第一次看 掌握度100%
+ * 2024/12/16 第二次看 掌握度100% trim split操作
  */
 var lengthOfLastWord = function (s) {
   //trim()會把字串前後的空白去掉
