@@ -3,6 +3,7 @@
  * @return {number[][]}
  * Tag: Array
  * 2024/11/14 第一次看 掌握度90% 學到二維陣列的使用 雙回圈的使用
+ * 2024/12/17 第二次看 掌握度100%
  */
 var generate = function (numRows) {
   var result = [];

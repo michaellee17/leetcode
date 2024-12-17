@@ -26,6 +26,7 @@ var mySqrt = function (x) {
       result = mid;
       //若中間值的平方大於x的話就把中間值放到result裡面
     } else {
+      //right往左移
       right = mid - 1;
     }
   }
