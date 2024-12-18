@@ -6,6 +6,7 @@
  * }
  * Tag: Linked List Hash_table
  * 2024/12/03 第一次看 掌握度60趴 快慢指针 了解linkedlist資料結構
+ * 2024/12/17 第二次看 掌握度80趴 快慢指針
  */
 
 /**
@@ -30,3 +31,20 @@ var hasCycle = function (head) {
 
   return true;
 };
+
+function ListNode(val) {
+  this.val = val;
+  this.next = null;
+}
+
+//設定測試資料
+let head = new ListNode(3);
+head.next = new ListNode(2);
+head.next.next = new ListNode(0);
+head.next.next.next = new ListNode(-4);
+//pos = 1
+head.next.next.next.next = head.next;
+
+console.log(`output->head`, head);
+
+console.log(`output->hasCycle(head)`, hasCycle(head));

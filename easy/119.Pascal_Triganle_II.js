@@ -3,6 +3,7 @@
  * @return {number[]}
  * Tag: Array
  * 2024/11/14 第一次看 掌握度90% 同118
+ * 2024/12/17 第二次看 掌握度100% 同118
  */
 var getRow = function (rowIndex) {
   var result = [];
