@@ -3,6 +3,7 @@
  * @return {void} Do not return anything, modify nums in-place instead.
  * Tag: Array
  * 2024/12/10 第一次看 掌握度100%
+ * 2024/12/18 第二次看 掌握度100%
  */
 
 //第一種解法 先推上非0的數字，再推上0
@@ -21,7 +22,7 @@ var moveZeroes = function (nums) {
 };
 
 //第二種解法依序置換
-var moveZeroes = function (nums) {
+var moveZeroes2 = function (nums) {
   let n = 0;
 
   for (let i = 0; i < nums.length; i++) {

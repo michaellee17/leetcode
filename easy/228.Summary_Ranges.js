@@ -2,7 +2,9 @@
  * @param {number[]} nums
  * @return {string[]}
  * tag: Array
- * 2024/12/10 第一次看
+ * 2024/12/10 第一次看 掌握度70%
+ * 2024/12/18 第二次看 掌握度90%
+ * //不連續的時候才推進result
  */
 var summaryRanges = function (nums) {
   let result = [];
@@ -29,5 +31,5 @@ var summaryRanges = function (nums) {
 
 console.log(
   `output-summaryRanges([0,1,2,4,5,7])`,
-  summaryRanges([0, 1, 2, 4, 5, 7])
+  summaryRanges2([0, 1, 2, 4, 5, 7])
 );

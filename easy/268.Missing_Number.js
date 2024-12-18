@@ -26,4 +26,4 @@ var missingNumber2 = function (nums) {
   return sum1 - sum2;
 };
 
-console.log(`output->missingNumber([0,1])`, missingNumber2([0, 1]));
+console.log(`output->missingNumber([0,1])`, missingNumber2([3, 0, 1]));

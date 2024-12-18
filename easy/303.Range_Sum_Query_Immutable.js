@@ -1,7 +1,8 @@
 /**
  * @param {number[]} nums
  * Tag: Array
- * 2024/12/10 第一次看 掌握度80%
+ * 2024/12/10 第一次看 掌握度60%
+ * 2024/12/18 第二次看 掌握度90%
  */
 var NumArray = function (nums) {
   let total = 0;

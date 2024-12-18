@@ -13,15 +13,11 @@ var convertToTitle = function (columnNumber) {
   let result = "";
   while (columnNumber > 0) {
     columnNumber--; // 調整為 0 索引
-    console.log(`output->columnNumber1`, columnNumber);
     let remainder = columnNumber % 26;
-    console.log(`output->remainder`, remainder);
     //印出A-Z
     result = String.fromCharCode(65 + remainder) + result;
-    console.log(`output->result`, result);
     //當columnNumber小於26時 會中斷迴圈
     columnNumber = Math.floor(columnNumber / 26);
-    console.log(`output->columnNumber2`, columnNumber);
   }
   return result;
 };
