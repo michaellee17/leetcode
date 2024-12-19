@@ -3,6 +3,7 @@
  * @return {string[]}
  * Tag: Array
  * 2021/12/11 第一次看 掌握度80% Map觀念 解構賦值不改變原陣列 map紀錄排名
+ * 2021/12/19 第二次看 掌握度100%
  */
 var findRelativeRanks = function (score) {
   const sorted = [...score].sort((a, b) => b - a);
@@ -37,7 +38,6 @@ var findRelativeRanks2 = function (score) {
     //如果i在rankObj裡面，就取rankObj[i]，不然就取i+1
     map.set(sorted[i], rankObj[i] || (i + 1).toString());
   }
-  console.log(`output->map`, map);
   return score.map((num) => map.get(num));
 };
 

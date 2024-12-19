@@ -2,11 +2,13 @@
  * @param {number[]} nums
  * @return {number[]}
  * Tag: Array
- * 2024/12/10 第一次看 掌握度100% set
+ * 2024/12/10 第一次看 掌握度100% set set.has
+ * 2024/12/19 第二次看 掌握度100%
  */
 var findDisappearedNumbers = function (nums) {
   let result = [];
   let set = new Set(nums);
+  console.log(`output->set`, set);
   for (let i = 1; i <= nums.length; i++) {
     if (!set.has(i)) {
       result.push(i);
@@ -26,7 +28,6 @@ var findDisappearedNumbers2 = function (nums) {
       nums[index] = -nums[index];
     }
   }
-  console.log(`output->nums`, nums);
   // 找出未標記為負數的位置，這些位置的索引 + 1 就是缺失的數字
   for (let i = 0; i < n; i++) {
     if (nums[i] > 0) {
@@ -38,4 +39,4 @@ var findDisappearedNumbers2 = function (nums) {
   return result;
 };
 
-console.log(`output->`, findDisappearedNumbers2([4, 3, 2, 7, 8, 2, 3, 1]));
+console.log(`output->`, findDisappearedNumbers([4, 3, 2, 7, 8, 2, 3, 1]));

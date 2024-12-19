@@ -4,6 +4,7 @@
  * @return {number}
  * Tag: Array
  * 2024/12/10 第一次看 掌握度80% 雙指針
+ * 2024/12/19 第二次看 掌握度90%
  */
 var findContentChildren = function (g, s) {
   // 將孩子的貪心指數數組和餅乾的尺寸數組進行排序

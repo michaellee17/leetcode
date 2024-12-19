@@ -4,6 +4,7 @@
  *
  * Tag: Array
  * 2024/12/11 第一次看掌握度90%
+ * 2024/12/19 第二次看掌握度100%
  */
 var findMaxConsecutiveOnes = function (nums) {
   let one = 0; // 當前連續 1 的計數
@@ -23,4 +24,4 @@ var findMaxConsecutiveOnes = function (nums) {
 
 // 測試範例
 console.log(findMaxConsecutiveOnes([1, 1, 0, 1, 1, 1])); // 輸出: 3
-console.log(findMaxConsecutiveOnes([1, 0, 1, 1, 0, 1])); // 輸出: 2
+// console.log(findMaxConsecutiveOnes([1, 0, 1, 1, 0, 1])); // 輸出: 2
