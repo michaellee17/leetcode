@@ -3,6 +3,7 @@
  * @return {number}
  * type: array
  * 2024/12/12 第一次看 掌握度70% map.has(num + 1)
+ * 2024/12/20 第二次看 掌握度80% 用map紀錄每個數字出現的次數 再用i i+1 算出最大的長度 並月Math.max取最大值取代
  */
 var findLHS = function (nums) {
   let map = new Map();
@@ -26,5 +27,21 @@ var findLHS = function (nums) {
   return maxLength;
 };
 
+var findLHS2 = function (nums) {
+  let map = new Map();
+  let maxLength = 0;
+
+  for (let num of nums) {
+    map.set(num, (map.get(num) || 0) + 1);
+  }
+  console.log(`output->map`, map);
+  for (let [num, count] of map) {
+    if (map.has(num + 1)) {
+      //用兩者取最大值 來取代
+      maxLength = Math.max(maxLength, count + map.get(num + 1));
+    }
+  }
+};
+
 // 測試範例
-console.log(findLHS([1, 3, 2, 2, 5, 2, 3, 7])); // 輸出: 5
+console.log(findLHS2([1, 3, 2, 2, 5, 2, 3, 7])); // 輸出: 5

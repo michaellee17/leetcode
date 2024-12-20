@@ -5,8 +5,10 @@
  * @return {number[][]}
  * Tag: Array
  * 2024/12/11 第一次看 掌握度 80% 這題有點難度，需要再看一下 reduce 動態思考邏輯
+ * 2024/12/20 第二次看 掌握度 90% flat reduce 用餘數來判斷是否要換行
  */
 var matrixReshape = function (mat, r, c) {
+  //先攤平陣列
   let a = mat.flat();
   let length = a.length;
   //組不出來就回傳原本的陣列
@@ -23,7 +25,9 @@ var matrixReshape = function (mat, r, c) {
         acc.push([cur]);
       } else {
         //最後一個陣列加入元素
+        console.log(`output->accbefore`, acc);
         acc[acc.length - 1].push(cur);
+        console.log(`output->accafter`, acc);
       }
       return acc;
     }, []);

@@ -3,6 +3,7 @@
  * @return {number}
  * Tag: Array
  * 2024/12/11 第一次看 掌握度 80% 邏輯有點複雜 需要推論一下
+ * 2024/12/20 第二次看 掌握度 90% 尋找規律
  */
 var arrayPairSum = function (nums) {
   // 將數組進行排序 小到大
