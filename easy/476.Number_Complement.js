@@ -16,12 +16,10 @@ var findComplement = function (num) {
   let bits = Math.floor(Math.log2(num)) + 1;
   // 生成與數字位數相同的全 1 的掩碼
   let mask = (1 << bits) - 1;
+  console.log(`output->mask`, mask);
   // 計算補數
   return num ^ mask;
 };
 
 // 測試用例
 console.log(findComplement(5)); // 輸出: 2
-console.log(findComplement(1)); // 輸出: 0
-console.log(findComplement(7)); // 輸出: 0
-console.log(findComplement(10)); // 輸出: 5
