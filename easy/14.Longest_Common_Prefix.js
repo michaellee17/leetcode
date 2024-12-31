@@ -4,6 +4,7 @@
  * Tag: String
  * 2024/11/14 第一次做 掌握度70% 多次刪除
  * 2024/12/16 第二次做 掌握度90 % 兩種解法 一是假設第一個字串整個字串為prefix用刪去的 二是一個一個字元比較用推的
+ * 2024/12/31 第三次做 掌握度100% while substring indexOf
  */
 var longestCommonPrefix = function (strs) {
   if (strs.length === 0) return "";
@@ -12,7 +13,8 @@ var longestCommonPrefix = function (strs) {
   let prefix = strs[0];
   //從第二個字串開始比較
   for (let i = 1; i < strs.length; i++) {
-    //如果不是從頭開始的話就把prefix的最後一個字元拿掉
+    console.log(`output->strs[i].indexOf(prefix)`, strs[i].indexOf(prefix));
+    //如果沒比到就砍掉最後一個字元
     while (strs[i].indexOf(prefix) !== 0) {
       //砍掉最後一個字元
       prefix = prefix.substring(0, prefix.length - 1);
@@ -45,8 +47,4 @@ var longestCommonPrefix2 = function (strs) {
 console.log(
   `output->longestCommonPrefix(["flower", "flow", "flight"])`,
   longestCommonPrefix(["flower", "flow", "flight"])
-);
-console.log(
-  `output->longestCommonPrefix(["dog","racecar","car"])`,
-  longestCommonPrefix(["dog", "racecardo", "cardo"])
 );
