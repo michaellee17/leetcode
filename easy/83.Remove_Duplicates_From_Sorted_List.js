@@ -1,15 +1,9 @@
 /**
- * Definition for singly-linked list.
- * function ListNode(val, next) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.next = (next===undefined ? null : next)
- * }
- */
-/**
  * @param {ListNode} head
  * @return {ListNode}
  * Tag: Linked List
- * 2024/12/17 第一次看 掌握度80% 用set來去重複
+ * 2024/12/17 第一次看 掌握度80%
+ * 2025/1/2 第二次看 掌握度100% 要先假設一個current指針 再由指針的移動去判斷
  */
 function ListNode(val, next) {
   this.val = val === undefined ? 0 : val;

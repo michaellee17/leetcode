@@ -7,6 +7,7 @@
  * }
  * Tag: Tree Depth-first Search Breadth-first Search 陣列操作
  * 2024/12/07 第一次看 掌握度60% BFS
+ * 2025/1/2 第二次看 掌握度70% BFS
  */
 /**
  * @param {TreeNode} root
@@ -16,7 +17,6 @@ var isSymmetric = function (root) {
   if (!root) return true;
 
   let queue = [root.left, root.right];
-
   while (queue.length) {
     let t1 = queue.shift();
     let t2 = queue.shift();
@@ -32,6 +32,22 @@ var isSymmetric = function (root) {
   }
 
   return true;
+};
+
+var isSymmetric2 = function (root) {
+  if (!root) return true;
+
+  const isMirror = (t1, t2) => {
+    if (!t1 && !t2) return true;
+    if (!t1 || !t2) return false;
+    return (
+      t1.val === t2.val &&
+      isMirror(t1.right, t2.left) &&
+      isMirror(t1.left, t2.right)
+    );
+  };
+
+  return isMirror(root.left, root.right);
 };
 
 // 測試範例

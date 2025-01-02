@@ -11,6 +11,7 @@
  * 第二個參數是移除的長度
  * 第三個參數是加入的元素
  * 2024/12/17 第二次看 掌握度90%
+ * 2025/1/2 第三次看 掌握度90%
  */
 
 //不用return 只要修改nums1
@@ -26,8 +27,6 @@ var merge2 = function (nums1, m, nums2, n) {
 
   //當i,j都大於等於0時
   while (i >= 0 && j >= 0) {
-    console.log(`output->i`, i);
-    console.log(`output->j`, j);
     //若nums1的值大於nums2的值
     if (nums1[i] > nums2[j]) {
       //將nums1的值放到合併後的最後一個索引

@@ -6,6 +6,8 @@
  *     this.right = (right===undefined ? null : right)
  * }
  * 2024/12/17 第一次看 掌握度70% 用遞迴來解
+ * 如果把左節點和右節點的位置固定不動，那麼根節點放在左節點的左邊，稱為前序（pre-order）、根節點放在左節點和右節點的中間，稱為中序（in-order）、根節點放在右節點的右邊，稱為後序（post-order）。
+ * 2025/1/2 第二次看 掌握度80%
  */
 /**
  * @param {TreeNode} root
@@ -16,8 +18,11 @@ var inorderTraversal = function (root) {
 
   const inorder = (node) => {
     if (node === null) return;
+    //左邊先
     inorder(node.left);
+    //中間
     result.push(node.val);
+    //右邊後
     inorder(node.right);
   };
 

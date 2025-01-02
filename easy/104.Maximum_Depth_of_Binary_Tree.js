@@ -11,6 +11,7 @@
  * @return {number}
  * Tag: Tree Depth-first Search
  * 2024/12/20 第一次看 掌握度70% DFS 用遞迴來解
+ * 2025/1/2 第二次看 掌握度80%
  */
 function TreeNode(val, left, right) {
   this.val = val === undefined ? 0 : val;
@@ -22,7 +23,9 @@ var maxDepth = function (root) {
     return 0;
   }
   let left = maxDepth(root.left);
+  console.log(`output->left`, left);
   let right = maxDepth(root.right);
+  console.log(`output->right`, right);
   return Math.max(left, right) + 1;
 };
 
@@ -31,4 +34,5 @@ let root = new TreeNode(
   new TreeNode(9),
   new TreeNode(20, new TreeNode(15), new TreeNode(7))
 );
-console.log(`output->root`, root);
+
+console.log(`output->maxDepth(root)`, maxDepth(root));

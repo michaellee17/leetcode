@@ -1,5 +1,6 @@
 /**
  * 2024/12/20 第一次看 掌握度 60 % 遞迴 很抽象
+ * 2025/1/2 第二次看 掌握度 70% 遞迴
  *
  */
 /**
@@ -7,7 +8,6 @@
  * @return {boolean}
  */
 var isBalanced = function (root) {
-  console.log(`output-> dfsHeight(root)`, dfsHeight(root));
   return dfsHeight(root) !== -1;
 };
 

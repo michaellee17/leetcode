@@ -4,6 +4,7 @@
  * Tag: Array
  * 2024/11/14 第一次看 掌握度90% 學到二維陣列的使用 雙回圈的使用
  * 2024/12/17 第二次看 掌握度100%
+ * 2025/1/2 第三次看 掌握度100% 設定i為0方便計算
  */
 var generate = function (numRows) {
   var result = [];
@@ -24,4 +25,4 @@ var generate = function (numRows) {
   return result;
 };
 
-console.log(`output->generate`, generate(5));
+console.log(`output->generate`, generate(1));
