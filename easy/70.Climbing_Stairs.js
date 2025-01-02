@@ -4,6 +4,7 @@
  * tag: Dynamic Programming
  * 2024/12/04 第一次看 掌握度90% 學到new Array同Array 的用法 少用但是要知道 正常都是直接給值
  * 2024/12/16 第二次看 掌握度100% 用一個陣列來存放前面的值 後面才方便調用
+ * 2025/1/2 第三次看 掌握度100% 用dp來存放前面的值
  */
 var climbStairs = function (n) {
   if (n === 1) return 1;
