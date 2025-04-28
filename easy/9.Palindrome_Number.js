@@ -24,9 +24,11 @@ function isPalindrome(x) {
     //翻轉數字取十位數以上的數字
     //reverserd * 10 為了進位 再加上原始數字的個位數
     reversed = reversed * 10 + (original % 10);
+    console.log(`output->reversed`, reversed);
     //原始數字除以10 去個位數
     //original = Math.floor(original / 10) 去個位數
     original = Math.floor(original / 10);
+    console.log(`output->original`, original);
   }
 
   return x === reversed;

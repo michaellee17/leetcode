@@ -13,7 +13,6 @@ var longestCommonPrefix = function (strs) {
   let prefix = strs[0];
   //從第二個字串開始比較
   for (let i = 1; i < strs.length; i++) {
-    console.log(`output->strs[i].indexOf(prefix)`, strs[i].indexOf(prefix));
     //如果沒比到就砍掉最後一個字元
     while (strs[i].indexOf(prefix) !== 0) {
       //砍掉最後一個字元
@@ -34,6 +33,7 @@ var longestCommonPrefix2 = function (strs) {
   for (let i = 0; i < strs[0].length; i++) {
     //設定char為第一個字串的第i個
     const char = strs[0][i];
+    console.log(`output->`, char);
     for (let j = 1; j < strs.length; j++) {
       //長度超過或是不等於char就回傳
       if (i >= strs[j].length || strs[j][i] !== char) {
@@ -44,7 +44,8 @@ var longestCommonPrefix2 = function (strs) {
   }
   return commonPrefix;
 };
+
 console.log(
-  `output->longestCommonPrefix(["flower", "flow", "flight"])`,
-  longestCommonPrefix(["flower", "flow", "flight"])
+  `output->longestCommonPrefix2(["flower", "flow", "flight"])`,
+  longestCommonPrefix2(["flower", "flow", "flight"])
 );

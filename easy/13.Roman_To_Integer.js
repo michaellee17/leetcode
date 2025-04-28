@@ -45,20 +45,21 @@ const table = {
   M: 1000,
 };
 
-const romanToInt = function (s) {
-  let total = 0;
-  let previousValue = 0;
-  for (let i = s.length - 1; i >= 0; i--) {
-    let currentValue = table[s[i]];
-    if (currentValue >= previousValue) {
-      total += currentValue;
-    } else {
-      total -= currentValue;
-    }
+var romanToInt = function (s) {
+  let romanNum = { I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000 };
+  let result = 0;
 
-    previousValue = currentValue;
+  for (let i = 0; i < s.length; i++) {
+    let current = romanNum[s[i]];
+    let next = romanNum[s[i + 1]];
+
+    if (current < next) {
+      result -= current;
+    } else {
+      result += current;
+    }
   }
-  return total;
+  return result;
 };
 
 console.log(romanToInt("III"));
