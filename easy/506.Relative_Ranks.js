@@ -2,8 +2,8 @@
  * @param {number[]} score
  * @return {string[]}
  * Tag: Array
- * 2021/12/11 第一次看 掌握度80% Map觀念 解構賦值不改變原陣列 map紀錄排名
- * 2021/12/19 第二次看 掌握度100%
+ * 2024/12/11 第一次看 掌握度80% Map觀念 解構賦值不改變原陣列 map紀錄排名
+ * 2024/12/19 第二次看 掌握度100%
  */
 var findRelativeRanks = function (score) {
   const sorted = [...score].sort((a, b) => b - a);

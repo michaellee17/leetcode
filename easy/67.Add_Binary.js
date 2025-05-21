@@ -26,12 +26,15 @@ var addBinary = function (a, b) {
     if (j >= 0) {
       sum += parseInt(b[j], 10);
     }
+    console.log(`output->sum`, sum);
     //計算有無進位 每圈都重算
     carry = Math.floor(sum / 2);
-
+    console.log(`output->carry`, carry);
     //取餘數並放進result
     result.push(sum % 2);
   }
+
+  console.log(`output->result`, result);
 
   //反轉再字串結合
   return result.reverse().join("");
@@ -40,4 +43,4 @@ var addBinary = function (a, b) {
 var addBinary2 = function (a, b) {
   return (BigInt(`0b${a}`) + BigInt(`0b${b}`)).toString(2);
 };
-console.log(`output->addBinary(11,1)`, addBinary("11", "1"));
+console.log(`output->addBinary(11,1)`, addBinary("1010", "1011"));

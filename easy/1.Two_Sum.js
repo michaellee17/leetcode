@@ -11,15 +11,15 @@
  * 2025/04/24 第五次看 掌握度 100% 1.在js中0是false 所以解法2之中才要使用!== undefined來判斷 如果使用if (seen[diff]) 會導致0的情況下無法正確判斷
  */
 //解法1 雙迴圈暴力解 運行時間49ms
-// var twoSum = function (nums, target) {
-//   for (let i = 0; i < nums.length; i++) {
-//     for (let j = i + 1; j < nums.length; j++) {
-//       if (nums[i] + nums[j] === target) {
-//         return [i, j];
-//       }
-//     }
-//   }
-// };
+var twoSum = function (nums, target) {
+  for (let i = 0; i < nums.length; i++) {
+    for (let j = i + 1; j < nums.length; j++) {
+      if (nums[i] + nums[j] === target) {
+        return [i, j];
+      }
+    }
+  }
+};
 //解法2 單迴圈 運行時間0ms
 // var twoSum = function (nums, target) {
 //   let seen = {};
@@ -64,3 +64,8 @@ var twoSum = function (nums, target) {
 // };
 
 console.log(`output->twoSum()`, twoSum([2, 7, 11, 15], 9));
+
+const test = () => {
+  console.log(`output->234`, 234);
+};
+test();

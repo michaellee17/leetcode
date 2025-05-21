@@ -14,6 +14,7 @@
  */
 var plusOne = function (digits) {
   for (let i = digits.length - 1; i >= 0; i--) {
+    console.log(`output->i`, i);
     //若非9的話就+1 直接返回
     if (digits[i] < 9) {
       digits[i]++;
@@ -27,4 +28,4 @@ var plusOne = function (digits) {
   digits.unshift(1);
   return digits;
 };
-console.log(`output->plusOne([1,0,9])`, plusOne([2, 1, 0, 9]));
+console.log(`output->plusOne([1,0,9])`, plusOne([2, 1, 0, 3]));

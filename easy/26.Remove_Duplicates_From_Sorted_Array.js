@@ -18,6 +18,7 @@ var removeDuplicates = function (nums) {
       nums[i] = nums[j];
     }
   }
+  //索引值從0開始，所以要+1
   return i + 1;
 };
 

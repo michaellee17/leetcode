@@ -15,18 +15,19 @@ var removeElement = function (nums, val) {
   for (let j = 0; j < nums.length; j++) {
     //若第j個不等於val的話
     if (nums[j] !== val) {
+      console.log(`output->i`, i);
       //把nums[j]放到nums[i]的位置(因為i是從0開始的所以就是往最前面移 移動完再i++ 就是下一個位子)
       nums[i] = nums[j];
-      //i+1
       i++;
+      console.log(`output->j`, j);
     }
   }
   console.log(`output->nums`, nums);
-  //回傳換了幾次
+  //回傳換了幾次 換了幾次就是i的數值
   return i;
 };
 
 console.log(
   `output->removeElemet([3,2,2,3],3)`,
-  removeElement([3, 2, 2, 3], 3)
+  removeElement([3, 2, 2, 3, 4], 3)
 );
