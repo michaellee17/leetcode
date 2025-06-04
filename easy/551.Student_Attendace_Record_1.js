@@ -28,3 +28,11 @@ var checkRecord = function (s) {
   // 如果 'A' 的數量不超過 1 且 'L' 的連續出現次數不超過 2，則返回 true
   return true;
 };
+
+function checkRecord(s) {
+  // 缺席次數
+  if (s.split("A").length - 1 >= 2) return false;
+  // 是否有連續三天遲到
+  if (s.includes("LLL")) return false;
+  return true;
+}
