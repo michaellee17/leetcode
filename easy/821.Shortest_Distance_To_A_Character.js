@@ -1,0 +1,33 @@
+/**
+ * @param {string} s
+ * @param {character} c
+ * @return {number[]}
+ * 2025/6//24 Math.min Math.abs 掌握度80%
+ * 技巧: 設置Infinity用來比小 設置-Infinity用來比大
+ */
+var shortestToChar = function (s, c) {
+  // 先取得目標字所有的位置
+  let indexArray = [];
+  s.split("").forEach((item, index) => {
+    if (item === c) {
+      indexArray.push(index);
+    }
+  });
+
+  let resultArray = [];
+  let length = s.length;
+
+  for (let i = 0; i < length; i++) {
+    // 計算 i 到所有目標字符的距離，取最小值
+    let minDistance = Infinity; //設為無限大 方便比小
+    for (let index of indexArray) {
+      minDistance = Math.min(minDistance, Math.abs(i - index));
+    }
+    console.log(`output->minDistance`, minDistance);
+    resultArray.push(minDistance);
+  }
+
+  return resultArray;
+};
+
+console.log(`output->`, shortestToChar("loveleetcode", "e"));
