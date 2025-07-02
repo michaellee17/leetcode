@@ -12,6 +12,7 @@
  * 第三個參數是加入的元素
  * 2024/12/17 第二次看 掌握度90%
  * 2025/1/2 第三次看 掌握度90%
+ * 2025/7/1 第四看 掌握度90%
  */
 
 //不用return 只要修改nums1
@@ -51,7 +52,25 @@ var merge2 = function (nums1, m, nums2, n) {
   }
 };
 
+var merge3 = function (nums1, m, nums2, n) {
+  let p1 = m - 1;
+  let p2 = n - 1;
+  let p = m + n - 1;
+
+  while (p2 >= 0) {
+    if (p1 >= 0 && nums1[p1] > nums2[p2]) {
+      nums1[p] = nums1[p1];
+      p1--;
+    } else {
+      nums1[p] = nums2[p2];
+      p2--;
+    }
+    p--;
+  }
+  console.log(`output->nums1`, nums1);
+};
+
 console.log(
   `output->merge([1,2,3,0,0,0],3,[2,5,6],3)`,
-  merge2([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3)
+  merge3([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3)
 );

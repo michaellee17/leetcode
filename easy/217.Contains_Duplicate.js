@@ -6,12 +6,14 @@
  * 2024/12/18 第二次看 熟練度100%
  * js new Set() 一個值的集合，其中的值是唯一的
  * set的長度和array的長度不同 set長度是size array長度是length
+ * 2025/7/2 第三看 解得出來但是比較效能的話
+ * 1比2快得多 因為她不用遍勵完整個nums 可以再比到相通元素時即時return
  */
 var containsDuplicate = function (nums) {
   let s = new Set();
   for (let i = 0; i < nums.length; i++) {
     if (s.has(nums[i])) return true;
-    else s.add(nums[i]);
+    s.add(nums[i]);
   }
   return false;
 };

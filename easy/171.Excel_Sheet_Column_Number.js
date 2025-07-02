@@ -12,7 +12,6 @@
  */
 var titleToNumber = function (columnTitle) {
   let result = 0;
-  console.log(`output->"A".chartCode(0)-64`, "A".charCodeAt(0) - 64);
   for (let i = 0; i < columnTitle.length; i++) {
     result = result * 26 + columnTitle.charCodeAt(i) - 64;
   }

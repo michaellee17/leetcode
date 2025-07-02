@@ -2,7 +2,8 @@
  * @param {string} s
  * @param {string} t
  * @return {boolean}
- * 2024/12/24 第一次看 掌握度 100% 用map
+ * 2024/12/24 第一次看 掌握度 80% 用map
+ * 2025/7/2 第二次看 掌握度90%
  */
 var isAnagram = function (s, t) {
   if (s.length !== t.length) {

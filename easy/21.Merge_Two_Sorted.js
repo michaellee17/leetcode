@@ -26,7 +26,7 @@ var mergeTwoLists = function (list1, list2) {
     list.push(list1.val);
     list1 = list1.next;
   }
-
+  console.log(`output->list1`, list1);
   // 遍歷 list2
   while (list2 !== null) {
     list.push(list2.val);

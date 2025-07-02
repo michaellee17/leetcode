@@ -8,14 +8,18 @@
  * String.fromCharCode(66) => B
  * String.fromCharCode(90) => Z
  * while使用
+ * 2025/7/1 第三次看熟練度90%
  */
 var convertToTitle = function (columnNumber) {
   let result = "";
   while (columnNumber > 0) {
     columnNumber--; // 調整為 0 索引
+    console.log(`output->columnNumber`, columnNumber);
     let remainder = columnNumber % 26;
+    console.log(`output->remainder`, remainder);
     //印出A-Z
     result = String.fromCharCode(65 + remainder) + result;
+    console.log(`output->result`, result);
     //當columnNumber小於26時 會中斷迴圈
     columnNumber = Math.floor(columnNumber / 26);
   }
@@ -49,4 +53,4 @@ var convertToTitle3 = function (columnNumber) {
   return result;
 };
 
-console.log(convertToTitle3(28));
+console.log(convertToTitle(28));

@@ -18,6 +18,8 @@
  * map.get() 取得鍵值對
  * ex: myMap.get(1);  "one"
  * 先判斷符合條件跳出迴圈 若不符合再set進map
+ * 2025/7/02 第三次看 掌握度90% 用object跟用map都是可以解的
+ * 運用到key不重複的特性符合去找最近距離這個需求
  */
 
 var containsNearbyDuplicate = function (nums, k) {
@@ -31,9 +33,10 @@ var containsNearbyDuplicate = function (nums, k) {
     }
     //沒有符合條件的話就set進map
     map.set(nums[i], i);
+    console.log(`output->map`, map);
   }
 
   return false;
 };
 
-console.log(`output->`, containsNearbyDuplicate([1, 2, 3, 1], 3));
+console.log(`output->`, containsNearbyDuplicate([1, 2, 3, 1, 2, 3], 2));

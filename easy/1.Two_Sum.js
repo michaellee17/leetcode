@@ -9,6 +9,7 @@
  * 2025/1/22 第四次看 掌握度 100% 1.暴力解注意j=i+1 j要在i之後
  * 2025/2/10 第五次看 掌握度 100%
  * 2025/04/24 第五次看 掌握度 100% 1.在js中0是false 所以解法2之中才要使用!== undefined來判斷 如果使用if (seen[diff]) 會導致0的情況下無法正確判斷
+ * 2025/6/27 第六次看 掌握度100% 注意!== undefined來判斷 如果使用if (seen[diff]) 會導致0的情況下無法正確判斷
  */
 //解法1 雙迴圈暴力解 運行時間49ms
 // var twoSum = function (nums, target) {
@@ -21,20 +22,20 @@
 //   }
 // };
 //解法2 單迴圈 運行時間0ms
-// var twoSum = function (nums, target) {
-//   let seen = {};
-//   for (let i = 0; i < nums.length; i++) {
-//     // 取得差值
-//     let diff = target - nums[i];
-//     if (seen[diff] !== undefined) {
-//       return [seen[diff], i];
-//     } else {
-//       seen[nums[i]] = i;
-//     }
-//     console.log(`output->seen`, seen);
-//   }
-//   return [];
-// };
+var twoSum = function (nums, target) {
+  let seen = {};
+  for (let i = 0; i < nums.length; i++) {
+    // 取得差值
+    let diff = target - nums[i];
+    if (seen[diff] !== undefined) {
+      return [seen[diff], i];
+    } else {
+      seen[nums[i]] = i;
+    }
+    console.log(`output->seen`, seen);
+  }
+  return [];
+};
 
 //解法3
 // var twoSum = function (nums, target) {

@@ -14,7 +14,6 @@
  */
 var plusOne = function (digits) {
   for (let i = digits.length - 1; i >= 0; i--) {
-    console.log(`output->i`, i);
     //若非9的話就+1 直接返回
     if (digits[i] < 9) {
       digits[i]++;
