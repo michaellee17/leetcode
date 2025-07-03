@@ -6,16 +6,15 @@
  * 若不是個位數則遞迴
  */
 var addDigits = function (num) {
-  let string = num.toString();
-  let sum = 0;
-  for (let item of string) {
-    sum += parseInt(item);
-  }
-  if (sum < 10) {
-    return sum;
-  } else {
-    return addDigits(sum);
-  }
+  if (num < 10) return num; // 如果是個位數就回傳
+
+  // 將 num 拆開成每個位數相加
+  let sum = num
+    .toString()
+    .split("")
+    .reduce((acc, cur) => acc + Number(cur), 0);
+
+  return addDigits(sum); // 遞迴處理
 };
 
 console.log(`output->addDigits(38)`, addDigits(38));

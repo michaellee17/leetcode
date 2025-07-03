@@ -2,15 +2,13 @@
  * @param {number} n
  * @return {boolean}
  * 2024/12/25 第一次看 掌握度90%
- * Math.pow(3, power) 3的power次方
+ * 2025/7/3 第二次看掌握度 90% 類似263.Ugly number的觀念
  */
 var isPowerOfThree = function (n) {
   if (n <= 0) return false;
-  let power = 0;
-  let result = 0;
-  while (result < n) {
-    result = Math.pow(3, power);
-    power++;
+
+  while (n % 3 === 0) {
+    n = n / 3;
   }
-  return result === n;
+  return 1 === n;
 };
