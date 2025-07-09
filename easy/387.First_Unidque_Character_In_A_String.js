@@ -2,6 +2,7 @@
  * @param {string} s
  * @return {number}
  * 2024/12/26 第一次看 掌握度90% Map操作
+ * 2025/7/7 第二次看 掌握度90% 用obj 來操作也行
  */
 var firstUniqChar = function (s) {
   let array = s.split("");
