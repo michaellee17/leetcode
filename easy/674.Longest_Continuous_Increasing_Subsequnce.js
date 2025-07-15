@@ -2,6 +2,7 @@
  * @param {number[]} nums
  * @return {number}
  * 2025/6/4 Math.max比較 掌握度80%
+ * 2025/7/14 第二次看 Math.max 條件判斷 注意邊界情況 掌握度90%
  */
 var findLengthOfLCIS = function (nums) {
   if (nums.length === 0) return 0;

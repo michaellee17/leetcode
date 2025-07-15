@@ -12,6 +12,7 @@ var findWords = function (words) {
 
   const result = [];
 
+  //三行之中滿足一行就可以
   for (const word of words) {
     if (
       canBeTypedWithOneRow(word, row1) ||
@@ -25,6 +26,7 @@ var findWords = function (words) {
   return result;
 };
 
+//這個單子都屬於通一行才會返回true 不然都是false
 function canBeTypedWithOneRow(word, row) {
   for (const char of word) {
     if (!row.has(char)) {

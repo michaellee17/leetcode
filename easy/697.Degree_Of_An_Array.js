@@ -2,23 +2,26 @@
  * @param {number[]} nums
  * @return {number}
  * 2025/6/10 第一次看 蠻複雜的 多map
+ * 2025/7/14 第二次看 掌握度70% 還是頗難要記錄每個數字出現的次數 第一次和最後一次出現的位子 最短的長度 需要包含第一個出現根最後一個出現的位子
  */
+
 var findShortestSubArray = function (nums) {
-  const count = new Map();
-  const firstIdx = new Map();
-  const lastIdx = new Map();
+  const count = new Map(); // 記錄每個數字出現次數
+  const firstIdx = new Map(); // 記錄每個數字第一次出現的位置
+  const lastIdx = new Map(); // 記錄每個數字最後一次出現的位置
 
   for (let i = 0; i < nums.length; i++) {
     const x = nums[i];
     if (!firstIdx.has(x)) {
-      firstIdx.set(x, i);
+      firstIdx.set(x, i); // 第一次出現就記錄下來
     }
-    lastIdx.set(x, i);
-    count.set(x, (count.get(x) || 0) + 1);
+    lastIdx.set(x, i); // 每次都更新為最新出現的位置
+    count.set(x, (count.get(x) || 0) + 1); // 出現次數+1
   }
   console.log(`output->count`, count);
   console.log(`output->firstIdx`, firstIdx);
   console.log(`output->lastIdx`, lastIdx);
+
   // 計算陣列的度（最大出現次數）
   let degree = 0;
   for (let v of count.values()) {
@@ -30,6 +33,7 @@ var findShortestSubArray = function (nums) {
   for (let [x, c] of count.entries()) {
     if (c === degree) {
       const len = lastIdx.get(x) - firstIdx.get(x) + 1;
+      console.log(`output->len`, len);
       minLen = Math.min(minLen, len);
     }
   }

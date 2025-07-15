@@ -3,6 +3,7 @@
  * @param {number} n
  * @return {boolean}
  * 2025/6/4 一開始看沒頭緒 主要是條件判斷，跟方法比較無關 掌握度70%
+ * 2025/7/11 還是蠻難的 掌握度70%
  */
 var canPlaceFlowers = function (flowerbed, n) {
   for (let i = 0; i < flowerbed.length; i++) {

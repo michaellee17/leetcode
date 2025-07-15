@@ -4,6 +4,7 @@
  * @return {string[]}
  * 2025/6/4 第一次做 掌握度70% 用object做還行 用map做還不太熟
  * 第一次看到定義成Infinity方便比小
+ * 2025/7/11 第二次看 掌握度80% 物件方法的運用
  *
  */
 // var findRestaurant = function (list1, list2) {

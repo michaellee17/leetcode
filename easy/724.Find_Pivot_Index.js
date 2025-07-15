@@ -2,16 +2,15 @@
  * @param {number[]} nums
  * @return {number}
  * 2025/6/19 用差值去算 掌握度70%
+ * 2025/7/15 右邊和等於總和-左側和- 當前值 掌握度90%
  */
 var pivotIndex = function (nums) {
   let totalSum = nums.reduce((acc, cur) => acc + cur, 0); // 總和
-  console.log(`output->totalSum`, totalSum);
   let leftSum = 0; // 左側總和
 
   for (let i = 0; i < nums.length; i++) {
     // 右側總和 = 總和 - 左側總和 - 當前值
     let rightSum = totalSum - leftSum - nums[i];
-    console.log(`output->rightSum`, rightSum);
     if (leftSum === rightSum) {
       return i; // 找到樞軸索引
     }

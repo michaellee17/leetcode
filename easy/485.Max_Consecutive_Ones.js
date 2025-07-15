@@ -5,6 +5,7 @@
  * Tag: Array
  * 2024/12/11 第一次看掌握度90%
  * 2024/12/19 第二次看掌握度100%
+ * 2025/7/9 第三次看掌握度90% 用Math.max或者是直接比較兩個值取代都可
  */
 var findMaxConsecutiveOnes = function (nums) {
   let one = 0; // 當前連續 1 的計數

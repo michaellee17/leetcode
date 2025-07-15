@@ -2,6 +2,9 @@
  * @param {number[]} nums
  * @return {number[]}
  * 2025/6/5 等差數列和 理想合-(錯誤合-重複的) = 差值 掌握度80%
+ * 2025/7/14 第二次看 注意型別轉換  物件取出的key值必為字串
+ * 可以用parseInt()轉換
+ * 或者Number()轉換
  */
 var findErrorNums = function (nums) {
   let n = nums.length;
