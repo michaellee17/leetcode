@@ -3,6 +3,7 @@
  * @param {number[][]} trust
  * @return {number}
  * 2025/6/27 需要想一下 掌握度70%
+ * 2025/7/18 掌握度80%
  */
 var findJudge = function (n, trust) {
   if (trust.length === 0 && n === 1) return 1; // 如果只有一個人且沒有信任關係，該人是法官

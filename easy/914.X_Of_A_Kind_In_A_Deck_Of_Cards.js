@@ -2,6 +2,7 @@
  * @param {number[]} deck
  * @return {boolean}
  * 2025/6/26 最大公因數公式 需要理解一下 掌握度70%
+ * 2025/7/17 最大公因數公式 掌握度80% 還是偏難
  */
 var hasGroupsSizeX = function (deck) {
   if (deck.length < 2) return false;

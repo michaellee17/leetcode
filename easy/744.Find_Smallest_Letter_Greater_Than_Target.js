@@ -4,6 +4,7 @@
  * @return {character}
  * 2025/6/19 第一次看 用charCodeAt來比大小 第一次有寫出來 但效能很差
  * JS英文字母可以不用轉換成charCodeAt 就可以比大小了
+ * 2025/7/15 用二分搜尋法 掌握度90%
  */
 // var nextGreatestLetter = function (letters, target) {
 //   let charCode = target.charCodeAt();
@@ -36,4 +37,4 @@ var nextGreatestLetter = function (letters, target) {
   return letters[left % letters.length];
 };
 
-console.log(`output->`, nextGreatestLetter(["c", "f", "j"], "a"));
+console.log(`output->`, nextGreatestLetter(["x", "x", "y", "y"], "z"));

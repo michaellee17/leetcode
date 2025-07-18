@@ -2,6 +2,7 @@
  * @param {number[]} nums
  * @return {boolean}
  * 2025/6/25 條件判斷 掌握度80%
+ * 2025/7/17 條件判斷 掌握度80%
  */
 var isMonotonic = function (nums) {
   let isIncreasing = true;

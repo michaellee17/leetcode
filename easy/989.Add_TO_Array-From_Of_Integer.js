@@ -3,6 +3,7 @@
  * @param {number} k
  * @return {number[]}
  * 2025/6/27 不能用次方的方法去算 因為js長度超過15會精度損失 掌握度60%
+ * 2025/7/18 掌握度70%
  */
 var addToArrayForm = function (num, k) {
   let res = [];

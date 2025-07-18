@@ -2,6 +2,7 @@
  * @param {string} s
  * @return {number[][]}
  * 2025/6/24 掌握度80%
+ * 2025/7/16 第二次看 掌握度80%
  */
 var largeGroupPositions = function (s) {
   let res = [];

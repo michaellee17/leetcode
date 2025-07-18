@@ -2,6 +2,7 @@
  * @param {number[]} nums
  * @return {number}
  * 2025/6/27 需要知道三角形成立要素 B+C > A (兩小邊之和大於第三大邊) 掌握度70%
+ * 2025/7/18 掌握度80%
  */
 var largestPerimeter = function (nums) {
   nums.sort((a, b) => b - a); // 降序排列

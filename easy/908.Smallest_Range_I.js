@@ -3,6 +3,8 @@
  * @param {number} k
  * @return {number}
  * 2025/6/25 第一次看 掌握度70%
+ * 2025/7/17 公式推倒 掌握度80%
+ * Math.max(0, max - min - 2 * k)
  */
 var smallestRangeI = function (nums, k) {
   const maxNum = Math.max(...nums); // 找出最大值

@@ -6,6 +6,7 @@
  * 2024/12/16 第二次做 掌握度90 % 兩種解法 一是假設第一個字串整個字串為prefix用刪去的 二是一個一個字元比較用推的
  * 2024/12/31 第三次做 掌握度100% while substring indexOf
  * 2025/6/30 第四次做 掌握度100% 注意 strs[i].indexOf(prefix) !== 0 這邊是判斷前綴 當前綴時strs[i].indexOf(prefix)該等於0 反之則!==0
+ * 2025/7/18 第五次做 掌握度100% 熟練度100%
  */
 var longestCommonPrefix = function (strs) {
   if (strs.length === 0) return "";

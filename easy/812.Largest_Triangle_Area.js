@@ -2,6 +2,7 @@
  * @param {number[][]} points
  * @return {number}
  * 2025/6/23 第一次看 沒見過這公式 掌握度60%
+ * 2025/7/16 第二次看 掌握度60% 要背面機公式
  */
 var largestTriangleArea = function (points) {
   let maxArea = 0;

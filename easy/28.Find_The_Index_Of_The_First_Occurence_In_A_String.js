@@ -11,6 +11,7 @@
  * 2024/12/16 第二次看 掌握度100%
  * 2024/12/31 第三次看 掌握度100%
  * 2025/6/30 第四次做 掌握度100%
+ * 2025/7/18 第五次做 掌握度100%
  */
 var strStr = function (haystack, needle) {
   return haystack.indexOf(needle);

@@ -3,16 +3,22 @@
  * @param {character} c
  * @return {number[]}
  * 2025/6//24 Math.min Math.abs 掌握度80%
+ * 2025/7/16 第二次看 掌握度80%
  * 技巧: 設置Infinity用來比小 設置-Infinity用來比大
  */
 var shortestToChar = function (s, c) {
   // 先取得目標字所有的位置
   let indexArray = [];
-  s.split("").forEach((item, index) => {
-    if (item === c) {
-      indexArray.push(index);
+  // s.split("").forEach((item, index) => {
+  //   if (item === c) {
+  //     indexArray.push(index);
+  //   }
+  // });
+  for (let i = 0; i < s.length; i++) {
+    if (s[i] === c) {
+      indexArray.push(i);
     }
-  });
+  }
 
   let resultArray = [];
   let length = s.length;
@@ -23,7 +29,6 @@ var shortestToChar = function (s, c) {
     for (let index of indexArray) {
       minDistance = Math.min(minDistance, Math.abs(i - index));
     }
-    console.log(`output->minDistance`, minDistance);
     resultArray.push(minDistance);
   }
 

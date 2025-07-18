@@ -2,6 +2,7 @@
  * @param {number[][]} image
  * @return {number[][]}
  * 2025/6/24 完全忘記陣列方法reverse 跟補1 0切換 掌握度80%
+ * 2025/7/17 完全忘記陣列方法reverse 跟補1 0切換 掌握度80%
  */
 var flipAndInvertImage = function (image) {
   return image.map((row) => row.reverse().map((num) => num ^ 1));

@@ -2,6 +2,9 @@
  * @param {number[]} bills
  * @return {boolean}
  * 2025/6/24 原本用stack做 但發現不用紀錄順序 所以想太複雜了 掌握度80%
+ * 2025/7/17 因為不用紀錄順序 只要記錄數量 用變數存就可以 注意20的情況比較複雜 掌握度80%
+ * tip:不紀錄順序的話不需要用陣列
+ *
  */
 var lemonadeChange = function (bills) {
   let five = 0; // 記錄 5 元的數量
