@@ -4,6 +4,7 @@
  * @return {boolean}
  * 2024/12/25 第一次看 掌握度90% Map
  * 2025/7/2 第二次看 掌握度90%
+ * 2025/7/21 第三次看 掌握度90% 要雙向映射
  */
 // var wordPattern = function (pattern, s) {
 //   let words = s.split(" ");

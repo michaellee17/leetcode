@@ -9,6 +9,13 @@
  * String.fromCharCode(90) => Z
  * while使用
  * 2025/7/1 第三次看熟練度90%
+ * 2025/7/21 第四次看熟練度90%
+ * columnNumber--;
+ * 由於 ASCII 編碼是從 0 開始，而 Excel 的欄位是從 1 開始，這裡將 columnNumber 減 1，以便正確對應到 ASCII 編碼。
+ * 雙向用法:
+ * 從ASCII編碼轉成數字:String.fromCharCode(65) => A (靜態方法)
+ * 從數字轉成ASCII編碼:string.charCodeAt(0) => 65 (在0號位置為A的情況) (實例方法)
+ * 要記一下大寫A的ASCII編碼是65 小寫a的ASCII編碼是97
  */
 var convertToTitle = function (columnNumber) {
   let result = "";
@@ -53,4 +60,4 @@ var convertToTitle3 = function (columnNumber) {
   return result;
 };
 
-console.log(convertToTitle(28));
+console.log(convertToTitle(701));
