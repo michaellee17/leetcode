@@ -1,11 +1,7 @@
 /**
  * @param {character[]} s
  * @return {void} Do not return anything, modify s in-place instead.
- */
-
-/**
- * @param {character[]} s
- * @return {void} Do not return anything, modify s in-place instead.
+ * 2025/07/22 第二次看 矩陣換位法
  */
 var reverseString = function (s) {
   let left = 0;
@@ -31,6 +27,14 @@ var reverseString1 = function (s) {
     result.push(item);
   }
   return result;
+};
+
+var reverseString2 = function (s) {
+  for (let i = 0; i < s.length / 2; i++) {
+    let left = s[i];
+    let right = s[s.length - 1 - i];
+    [s[i], s[s.length - 1 - i]] = [right, left];
+  }
 };
 
 console.log(reverseString(["h", "e", "l", "l", "o"]));

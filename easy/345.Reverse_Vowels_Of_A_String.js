@@ -4,6 +4,7 @@
  * 2024/12/25 第一次看 掌握度80% map結合 344.Reverse_String.js的交換位置
  * 2025/7/3 第二次看 掌握度90% PUSH POP運用
  * 注意字串不能s[i] = xxx 來改變字元
+ * 2025/07/22 第三次看 掌握度90% 轉成陣列來操作
  */
 var reverseVowels = function (s) {
   let vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];

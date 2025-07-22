@@ -2,6 +2,7 @@
  * @param {number} n
  * @return {string[]}
  * 2024/12/26 第一次看 掌握度80%
+ * 2025/7/22 第二次看 掌握度90% 基本條件判斷
  */
 var fizzBuzz = function (n) {
   let answer = [];
