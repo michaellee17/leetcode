@@ -24,29 +24,41 @@
 //   }
 // };
 
+// var findRestaurant = function (list1, list2) {
+//   //still 20ms beating 51%
+//   var indexes = new Map();
+
+//   for (let i = 0; i < list1.length; i++) indexes.set(list1[i], i);
+//   console.log(`output->indexes`, indexes);
+//   var result = [];
+//   var leastSum = Infinity;
+//   for (let i = 0; i < list2.length; i++) {
+//     var list1Index = indexes.get(list2[i]);
+//     console.log(`output->list1Index`, list1Index);
+//     if (list1Index === undefined) continue;
+
+//     var count = list1Index + i;
+//     console.log(`output->count`, count);
+//     if (count < leastSum) {
+//       //比較最小的index合
+//       result = [list2[i]]; //如果比到將這個值放到回傳中
+//       leastSum = count; //如果比到更新最小值
+//     } else if (count === leastSum) result.push(list2[i]); //處理並列的情況
+//   }
+
+//   return result;
+// };
+
 var findRestaurant = function (list1, list2) {
-  //still 20ms beating 51%
-  var indexes = new Map();
-
-  for (let i = 0; i < list1.length; i++) indexes.set(list1[i], i);
-  console.log(`output->indexes`, indexes);
-  var result = [];
-  var leastSum = Infinity;
-  for (let i = 0; i < list2.length; i++) {
-    var list1Index = indexes.get(list2[i]);
-    console.log(`output->list1Index`, list1Index);
-    if (list1Index === undefined) continue;
-
-    var count = list1Index + i;
-    console.log(`output->count`, count);
-    if (count < leastSum) {
-      //比較最小的index合
-      result = [list2[i]]; //如果比到將這個值放到回傳中
-      leastSum = count; //如果比到更新最小值
-    } else if (count === leastSum) result.push(list2[i]); //處理並列的情況
+  let obj = {};
+  for (let i = 0; i < list1.length; i++) {
+    if (list2.indexOf(list1[i]) !== -1) {
+      obj[list1[i]] = i + list2.indexOf(list1[i]);
+    }
   }
-
-  return result;
+  console.log(Object.values(obj));
+  let minIndexSum = Math.min(...Object.values(obj));
+  return Object.keys(obj).filter((key) => obj[key] === minIndexSum);
 };
 
 console.log(

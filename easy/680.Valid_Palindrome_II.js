@@ -2,6 +2,7 @@
  * @param {string} s
  * @return {boolean}
  * 2025/6/10 第一次看 蠻複雜的還需要用輔助函數 掌握度30%
+ * 2025/7/23 第二次看 還是蠻抽象的 掌握度40%
  */
 var validPalindrome = function (s) {
   // 輔助函式：判斷子字串是否是回文

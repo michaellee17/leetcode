@@ -58,7 +58,7 @@ var licenseKeyFormatting = function (s, k) {
   res = clean.slice(0, start);
   console.log(start);
   for (let i = start; i <= clean.length; i = i + k) {
-    if (i !== 0 && i !== clean.length) res += "-";
+    if (i !== 0 && i !== clean.length) res += "-"; //首尾不加破折號 連結處的意思
     res = res + clean.slice(i, i + k);
   }
   return res;

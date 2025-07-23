@@ -2,6 +2,7 @@
  * @param {string} s
  * @return {boolean}
  * 2024/12/25 第一次看 掌握度90%
+ * 2025/07/23 第二次看 掌握度100%
  */
 var checkRecord = function (s) {
   // 計算字串中 'A' 的數量
@@ -36,3 +37,22 @@ function checkRecord(s) {
   if (s.includes("LLL")) return false;
   return true;
 }
+
+var checkRecord = function (s) {
+  let consecutiveLateCount = 0;
+  let absentCount = 0;
+  for (let item of s) {
+    if (item === "A") {
+      absentCount++;
+      consecutiveLateCount = 0;
+    }
+    if (item === "L") {
+      consecutiveLateCount++;
+    }
+    if (item === "P") {
+      consecutiveLateCount = 0;
+    }
+    if (absentCount > 1 || consecutiveLateCount > 2) return false;
+  }
+  return true;
+};

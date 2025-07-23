@@ -2,6 +2,7 @@
  * @param {string} moves
  * @return {boolean}
  * 2025/6/5 第一次看 switch case 掌握度100%
+ * 2025/7/23 第二次看 掌握度100%
  */
 var judgeCircle = function (moves) {
   let obj = { x: 0, y: 0 };
