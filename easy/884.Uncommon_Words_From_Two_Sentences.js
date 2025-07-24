@@ -4,6 +4,7 @@
  * @return {string[]}
  * 2025/6/24  map方法操作
  * 以這題的情況來說 key值是字串可以用map來寫會比較簡單
+ * 2025/7/24 要記錄次數 出現兩次或以上的不能當作uncommon word 掌握度80%
  */
 // var uncommonFromSentences = function (s1, s2) {
 //   const getMap = (string) => {
@@ -37,28 +38,45 @@
 //   return result;
 // };
 
+// var uncommonFromSentences = function (s1, s2) {
+//   const getObj = (string) => {
+//     const arr = string.split(" ");
+//     const obj = {};
+//     arr.forEach((item) => {
+//       obj[item] = (obj[item] || 0) + 1;
+//     });
+//     return obj;
+//   };
+//   objs1 = getObj(s1);
+//   objs2 = getObj(s2);
+
+//   const result = [];
+
+//   for (let word in objs1) {
+//     if (objs1[word] === 1 && !(word in objs2)) result.push(word);
+//   }
+
+//   for (let word in objs2) {
+//     if (objs2[word] === 1 && !(word in objs1)) result.push(word);
+//   }
+
+//   return result;
+// };
+
 var uncommonFromSentences = function (s1, s2) {
-  const getObj = (string) => {
-    const arr = string.split(" ");
-    const obj = {};
-    arr.forEach((item) => {
-      obj[item] = (obj[item] || 0) + 1;
-    });
-    return obj;
-  };
-  objs1 = getObj(s1);
-  objs2 = getObj(s2);
-
-  const result = [];
-
-  for (let word in objs1) {
-    if (objs1[word] === 1 && !(word in objs2)) result.push(word);
-  }
-
-  for (let word in objs2) {
-    if (objs2[word] === 1 && !(word in objs1)) result.push(word);
-  }
-
+  let s1Arr = s1.split(" ");
+  let s2Arr = s2.split(" ");
+  let result = [];
+  s1Arr.forEach((item) => {
+    if (s2.indexOf(item) === -1) {
+      result.push(item);
+    }
+  });
+  s2Arr.forEach((item) => {
+    if (s1.indexOf(item) === -1) {
+      result.push(item);
+    }
+  });
   return result;
 };
 

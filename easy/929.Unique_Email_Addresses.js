@@ -3,6 +3,7 @@
  * @return {number}
  * 2025/6/25 用正則效能會比較好 掌握度90%
  * 2025/7/17 注意去除符號的方法 掌握度90%
+ * 2025/7/24 注意set的用法 掌握度90%
  */
 var numUniqueEmails = function (emails) {
   const formatEmail = (email) => {

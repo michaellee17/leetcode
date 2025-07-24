@@ -2,6 +2,8 @@
  * @param {string} sentence
  * @return {string}
  * 2025/7/16 第二次看 掌握度70%
+ * 2025/7/24 第三次看 掌握度90% 其實比較適合用map來寫 然後記得js.string.repeat(x)用法
+ * 'abc'.repeat(2) = 'abcabc' 不然就是要字串模板
  */
 const vowels = ["a", "A", "e", "E", "i", "I", "o", "O", "u", "U"];
 var toGoatLatin = function (sentence) {

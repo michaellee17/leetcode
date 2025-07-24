@@ -4,6 +4,7 @@
  * @return {number[]}
  * 2025/6//24 Math.min Math.abs 掌握度80%
  * 2025/7/16 第二次看 掌握度80%
+ * 2025/724/第三次看 掌握度90%  Math.min可以快速比較 距離可以用Math.abs來取
  * 技巧: 設置Infinity用來比小 設置-Infinity用來比大
  */
 var shortestToChar = function (s, c) {

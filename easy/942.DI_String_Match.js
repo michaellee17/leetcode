@@ -2,6 +2,8 @@
  * @param {string} s
  * @return {number[]}
  * 2025/6/26 一些邏輯判斷 掌握度80%
+ * 2025/7/4 tips:I開頭先推最小 D開頭先推最 推完++ 然後 字串跟陣列還差一 最後還要補推 掌握度90%
+ *
  */
 var diStringMatch = function (s) {
   let low = 0;

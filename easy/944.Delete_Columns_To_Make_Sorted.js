@@ -3,6 +3,7 @@
  * @return {number}
  * 2025/6/26 蠻難的 掌握度50%
  * 2025/7/18 還是蠻男的 掌握度60%
+ * 2025/7/24 網格比較 row從1開始 是因為row-1 = 0
  */
 var minDeletionSize = function (strs) {
   let deletionCount = 0; // 記錄需要刪除的列數

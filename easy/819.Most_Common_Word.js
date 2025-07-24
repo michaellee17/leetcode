@@ -3,6 +3,7 @@
  * @param {string[]} banned
  * @return {string}
  * 2025/6/23 掌握度70% 使用map去處理 map也有entries但跟Object的用法不同
+ * 2025/7/24 replace搭配正則來處理標點符號 掌握度70%
  * map:for (let [word, count] of wordCount.entries()) {
     if (count > maxCount) {
       maxWord = word;
@@ -42,7 +43,6 @@ var mostCommonWord = function (paragraph, banned) {
   return maxWord;
 };
 
-console.log(mostCommonWord("a, a, a, a, b,b,b,c, c", [])); // 輸出 "a"
 console.log(
   `output->`,
   mostCommonWord("Bob hit a ball, the hit BALL flew far after it was hit.", [

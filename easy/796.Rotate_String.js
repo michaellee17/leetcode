@@ -2,7 +2,8 @@
  * @param {string} s
  * @param {string} goal
  * @return {boolean}
- * 2025/6/9 暫存 陣列轉字串 字串在轉回陣列
+ * 2025/6/9 暫存 陣列轉字串 字串在轉回陣列 掌握度80%
+ * 2025/7/24 array.shift() array.push運用 掌握度90%
  */
 var rotateString = function (s, goal) {
   let temp = s;

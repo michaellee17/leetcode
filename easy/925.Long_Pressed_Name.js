@@ -3,6 +3,7 @@
  * @param {string} typed
  * @return {boolean}
  * 2025/6/26 雙指針 小複雜 掌握度70 %
+ * 2025/7/24 掌握度 80% 這有排序問題 所以不能用計數法去處理 只能用爽指針
  */
 var isLongPressedName = function (name, typed) {
   let i = 0; // 指向 name 的指標
