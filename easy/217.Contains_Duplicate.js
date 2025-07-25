@@ -8,6 +8,7 @@
  * set的長度和array的長度不同 set長度是size array長度是length
  * 2025/7/2 第三看 解得出來但是比較效能的話
  * 1比2快得多 因為她不用遍勵完整個nums 可以再比到相通元素時即時return
+ * 2025/7/25 第四次看 用1快速簡單
  */
 var containsDuplicate = function (nums) {
   let s = new Set();

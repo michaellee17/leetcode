@@ -8,6 +8,7 @@
  * 可以用抵銷的方式來解決這個問題
  * 假設1跟2都出現一次那等於沒出現因為他們互相抵銷
  * 或者更簡單用map紀錄每個數字出現的次數
+ * 2025/7/25 第三次看 掌握度90% 用map處理簡單又快
  *
  */
 var majorityElement = function (nums) {
@@ -67,8 +68,26 @@ var majorityElement3 = function (nums) {
 
   return currentHighest;
 };
-let res = majorityElement2([3, 2, 3]);
-let res2 = majorityElement([2, 2, 1, 1, 1, 2, 2]);
+
+var majorityElement4 = function (nums) {
+  let length = nums.length;
+  let map = new Map();
+  for (let item of nums) {
+    if (map.has(item)) {
+      map.set(item, map.get(item) + 1);
+    } else {
+      map.set(item, 1);
+      console.log(map);
+    }
+    if (map.get(item) > Math.floor(length / 2)) {
+      console.log(123);
+      return item;
+    }
+  }
+};
+
+let res = majorityElement4([3, 2, 3]);
+// let res2 = majorityElement([2, 2, 1, 1, 1, 2, 2]);
 
 console.log(res);
 // console.log(res2);

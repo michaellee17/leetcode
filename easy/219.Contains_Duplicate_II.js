@@ -20,22 +20,34 @@
  * 先判斷符合條件跳出迴圈 若不符合再set進map
  * 2025/7/02 第三次看 掌握度90% 用object跟用map都是可以解的
  * 運用到key不重複的特性符合去找最近距離這個需求
+ * 2025/7/25 第四次看 暴力解失敗
  */
 
-var containsNearbyDuplicate = function (nums, k) {
-  let map = new Map();
-  for (let i = 0; i < nums.length; i++) {
-    //判斷是否有在map裡面
-    //且以下面條件為例子 i=3  nums[3]=1  map.get(1)=0  3-0=3<= k=3
-    // i = 題目上的i map.get(nums[i]) = 題目上的j
-    if (map.has(nums[i]) && i - map.get(nums[i]) <= k) {
-      return true;
-    }
-    //沒有符合條件的話就set進map
-    map.set(nums[i], i);
-    console.log(`output->map`, map);
-  }
+// var containsNearbyDuplicate = function (nums, k) {
+//   let map = new Map();
+//   for (let i = 0; i < nums.length; i++) {
+//     //判斷是否有在map裡面
+//     //且以下面條件為例子 i=3  nums[3]=1  map.get(1)=0  3-0=3<= k=3
+//     // i = 題目上的i map.get(nums[i]) = 題目上的j
+//     if (map.has(nums[i]) && i - map.get(nums[i]) <= k) {
+//       return true;
+//     }
+//     //沒有符合條件的話就set進map
+//     map.set(nums[i], i);
+//     console.log(`output->map`, map);
+//   }
 
+//   return false;
+// };
+
+var containsNearbyDuplicate = function (nums, k) {
+  for (let i = 0; i < nums.length; i++) {
+    for (let j = i + 1; j < nums.length; j++) {
+      if (nums[i] === nums[j] && Math.abs(i - j) <= k && i !== j) {
+        return true;
+      }
+    }
+  }
   return false;
 };
 

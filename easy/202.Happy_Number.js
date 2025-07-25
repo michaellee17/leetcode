@@ -1,7 +1,8 @@
 /**
  * @param {number} n
  * @return {boolean}
- * 2024/12/23 第一次看 掌握度 70% 快滿指針 題目給的是數字 要先轉字串才能跑迴圈
+ * 2024/12/23 第一次看 掌握度 70% 快慢指針 題目給的是數字 要先轉字串才能跑迴圈
+ * 2025/7/25 第二次看 掌握度70% 要研究一下
  */
 var isHappy = function (n) {
   const getNext = (number) => {
@@ -11,6 +12,7 @@ var isHappy = function (n) {
       let digit = parseInt(numStr[i]);
       totalSum += digit * digit;
     }
+    console.log(`output->totalSum`, totalSum);
     return totalSum;
   };
 
@@ -26,8 +28,9 @@ var isHappy = function (n) {
     //快指针走二步，调用再次计算平方和。
     fast = getNext(getNext(fast));
   }
+  console.log(`output->fast`, fast);
   return fast === 1;
 };
 
 console.log(`output->isHappy(19)`, isHappy(19)); // 輸出: true
-console.log(`output->isHappy(2)`, isHappy(2)); // 輸出: false
+// console.log(`output->isHappy(2)`, isHappy(2)); // 輸出: false

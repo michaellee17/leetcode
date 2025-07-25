@@ -5,6 +5,7 @@
  *     this.next = null;
  * }
  * 2024/12/18 第一次看 掌握度70%
+ * 2025/7/25 第二次看 掌握度70%
  */
 
 /**
@@ -20,7 +21,7 @@ function getIntersectionNode(headA, headB) {
 
   while (pointerA !== pointerB) {
     pointerA = pointerA ? pointerA.next : headB;
-    console.log(`output->pointerA`, pointerA);
+    console.log(pointerA);
     pointerB = pointerB ? pointerB.next : headA;
   }
 
