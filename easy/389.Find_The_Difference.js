@@ -3,6 +3,7 @@
  * @param {string} t
  * @return {character}
  * 2024/12/26 第一次看 掌握度90% Map操作
+ * 2025/7/25 第二次看  用object可以解 掌握度90%
  */
 // var findTheDifference = function (s, t) {
 //   let map = new Map();
@@ -46,6 +47,23 @@ var findTheDifference = function (s, t) {
   tsum += t.charCodeAt(t.length - 1);
   console.log(`output->tsum`, tsum);
   return String.fromCharCode(tsum - sum);
+};
+
+var findTheDifference = function (s, t) {
+  let obj = {};
+  for (let item of t) {
+    obj[item] = (obj[item] || 0) + 1;
+  }
+  for (let item of s) {
+    if (obj[item]) {
+      obj[item]--;
+    }
+  }
+  for (let key in obj) {
+    if (obj[key] === 1) {
+      return key;
+    }
+  }
 };
 
 console.log(`output-findTheDifference`, findTheDifference("abcd", "abcde")); // e

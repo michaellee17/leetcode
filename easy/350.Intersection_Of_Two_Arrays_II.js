@@ -25,6 +25,21 @@ var intersect = function (nums1, nums2) {
   return result;
 };
 
+var intersect = function (nums1, nums2) {
+  let hash = {};
+  let result = [];
+  for (let num of nums1) {
+    hash[num] = (hash[num] || 0) + 1;
+  }
+  for (let num of nums2) {
+    if (hash[num]) {
+      result.push(num);
+      hash[num]--;
+    }
+  }
+  return result;
+};
+
 // console.log(`output->`, intersect([1, 2, 2, 1], [2, 2]));
 
 // console.log(`output->`, intersect([4, 9, 5], [9, 4, 9, 8, 4]));

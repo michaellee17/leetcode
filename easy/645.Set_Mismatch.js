@@ -5,6 +5,7 @@
  * 2025/7/14 第二次看 注意型別轉換  物件取出的key值必為字串
  * 可以用parseInt()轉換
  * 或者Number()轉換
+ * 2025/7/28 hash Table 邏輯推理 用obj可以 用set也可以(這邊只是要先找出重複的用set比較快) 掌握度90%
  */
 var findErrorNums = function (nums) {
   let n = nums.length;

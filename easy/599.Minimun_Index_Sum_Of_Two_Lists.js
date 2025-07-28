@@ -5,6 +5,11 @@
  * 2025/6/4 第一次做 掌握度70% 用object做還行 用map做還不太熟
  * 第一次看到定義成Infinity方便比小
  * 2025/7/11 第二次看 掌握度80% 物件方法的運用
+ * 2025/7/28 第三次看 掌握度90%
+ * 1.用map紀錄list1出現次數
+ * 2.再用sumMap當list2有出現map中有紀錄的key時 將index相加 存入sumMap
+ * 3.遍歷找出最小值
+ * 4.遍歷推入等於最小值的key
  *
  */
 // var findRestaurant = function (list1, list2) {
@@ -57,9 +62,35 @@ var findRestaurant = function (list1, list2) {
     }
   }
   console.log(Object.values(obj));
-  let minIndexSum = Math.min(...Object.values(obj));
-  return Object.keys(obj).filter((key) => obj[key] === minIndexSum);
+  let minIndexSum = Math.min(...Object.values(obj)); //解構以供比較
+  return Object.keys(obj).filter((key) => obj[key] === minIndexSum); //使用陣列方法找出出符合的
 };
+
+// var findRestaurant = function (list1, list2) {
+//   let map = new Map();
+//   list1.forEach((item, index) => {
+//     map.set(item, index);
+//   });
+//   let sumMap = new Map();
+//   list2.forEach((item, index) => {
+//     if (map.has(item)) {
+//       sumMap.set(item, map.get(item) + index);
+//     }
+//   });
+//   let result = [];
+//   let minValue = Infinity;
+//   for (let [key, value] of sumMap) {
+//     if (value < minValue) {
+//       minValue = value;
+//     }
+//   }
+//   for (let [key, value] of sumMap) {
+//     if (sumMap.get(key) === minValue) {
+//       result.push(key);
+//     }
+//   }
+//   return result;
+// };
 
 console.log(
   `output->`,

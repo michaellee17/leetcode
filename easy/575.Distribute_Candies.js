@@ -4,6 +4,7 @@
  * type: array
  * 2024/12/12 第一次看 掌握度100% set.size
  * 2024/12/20 第二次看 掌握度100%
+ * 2025/7/28 第三次看 掌握度 100%
  */
 var distributeCandies = function (candyType) {
   const availableCandies = candyType.length / 2;

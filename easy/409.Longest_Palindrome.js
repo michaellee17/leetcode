@@ -4,6 +4,7 @@
  * 2024/12/26 第一次看 掌握度80% map
  * 2025/7/8 第二次看 用object也可以做 基數個只能用-1次 掌握度80
  * 2025/7/22 第三次看 掌握度90% 條件判斷要仔細分析
+ * 2025/728 第三次看 掌握度90% 奇數可以有一個擺中間 要特別注意一下條件
  */
 // var longestPalindrome = function (s) {
 //   let map = new Map();
@@ -67,8 +68,7 @@ var longestPalindrome = function (s) {
       hasSingle = true;
     }
   }
-  console.log(hasSingle);
-  console.log(count);
+
   return hasSingle ? count + 1 : count;
 };
 

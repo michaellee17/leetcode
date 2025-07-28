@@ -4,7 +4,8 @@
  * Tag: Array, String
  * 2024/12/11 第一次看 掌握度90% Set觀念
  * 2024/12/19 第二次看 掌握度100%
- * 2025/07/23 第三次看 掌握度100% 1.set處理(搭配set.has) 2.Array.from()字串轉陣列用includes找 3.字串用indexOf === -1 找
+ * 2025/7/23 第三次看 掌握度100% 1.set處理(搭配set.has) 2.Array.from()字串轉陣列用includes找 3.字串用indexOf === -1 找
+ * 2025/7/28 第四次看 掌握度90% set處理
  *
  */
 var findWords = function (words) {
