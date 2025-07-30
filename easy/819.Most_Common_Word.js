@@ -11,6 +11,9 @@
     }
   }
     object: Object.entries(obj)
+    2025/7/28 去除其他符號的正則 (將其他轉換成空字串) replace(/[^a-z]/g, " ")
+    /.../g g代表global全域
+    [^...] 否定字元集 不屬於中括號內的字元
  */
 var mostCommonWord = function (paragraph, banned) {
   // 將段落轉為小寫並去掉標點符號
