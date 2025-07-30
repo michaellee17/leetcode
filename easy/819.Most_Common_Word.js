@@ -16,9 +16,11 @@ var mostCommonWord = function (paragraph, banned) {
   // 將段落轉為小寫並去掉標點符號
   let words = paragraph
     .toLowerCase()
-    .replace(/[^a-z]/g, " ") // 將非字母字符替換為空格
-    .split(/\s+/); // 分割成單字陣列
-
+    .replace(/[^a-z]/g, " ")
+    .split(" ") // 將非字母字符替換為空格
+    .filter((w) => w.length > 0);
+  // .split(/\s+/); // 分割成單字陣列
+  console.log(`output->words`, words);
   // 建立禁用單字集合
   let bannedSet = new Set(banned);
 

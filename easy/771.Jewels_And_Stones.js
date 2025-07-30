@@ -4,6 +4,7 @@
  * @return {number}
  * 2025/6/20 這題不難 掌握度100%
  * 2025/7/24 物件陣列操作 掌握度90%
+ * 2025/7/28 用string操作 快速簡便 掌握度100%
  */
 // var numJewelsInStones = function (jewels, stones) {
 //   let jewelsArray = [];
@@ -36,6 +37,14 @@ var numJewelsInStones = function (jewels, stones) {
     if (jArr.includes(key)) {
       count += value;
     }
+  }
+  return count;
+};
+
+var numJewelsInStones = function (jewels, stones) {
+  let count = 0;
+  for (let stone of stones) {
+    if (jewels.includes(stone)) count++;
   }
   return count;
 };
