@@ -2,6 +2,7 @@
  * @param {number[]} nums
  * @return {boolean[]}
  * 2025/7/30 算比較間單的 掌握度80%
+ * 2025/7/31 第二次看 掌握度80%
  */
 var prefixesDivBy5 = function (nums) {
   const res = [];

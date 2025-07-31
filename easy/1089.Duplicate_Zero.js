@@ -26,9 +26,9 @@ var duplicateZeros = (arr) => {
   for (let i = arr.length - 1; i >= 0; i--) {
     if (arr[i] === 0) {
       for (let j = arr.length - 1; j > i; j--) {
+        console.log(`output->j`, j);
         arr[j] = arr[j - 1];
       }
-      console.log(`output->arr`, arr);
     }
   }
 };
