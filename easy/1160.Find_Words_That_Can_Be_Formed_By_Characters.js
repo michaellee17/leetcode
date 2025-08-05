@@ -2,39 +2,34 @@
  * @param {string[]} words
  * @param {string} chars
  * @return {number}
- * 2025/7/31 還可以理解 掌握度70%
+ * 2025/7/31 還可以理解 掌握度90%
  */
 var countCharacters = function (words, chars) {
-  // 统计 chars 中每个字符的频率
-  let charCount = {};
-  for (let char of chars) {
-    charCount[char] = (charCount[char] || 0) + 1;
+  //先取得chars中字母出現的次數
+  let charsCount = {};
+  for (let item of chars) {
+    charsCount[item] = (charsCount[item] || 0) + 1;
   }
-
-  let totalLength = 0;
-
-  words.forEach((word) => {
-    // 统计当前单词中每个字符的频率
+  let length = 0;
+  words.forEach((item) => {
+    //取得words中item出現的次數
     let wordCount = {};
-    for (let char of word) {
-      wordCount[char] = (wordCount[char] || 0) + 1;
+    for (let word of item) {
+      wordCount[word] = (wordCount[word] || 0) + 1;
     }
-
-    // 检查当前单词是否可以由 chars 组成
-    let canForm = true;
-    for (let char in wordCount) {
-      // 如果字符不存在于 chars 中，或者频率不够
-      if (!charCount[char] || wordCount[char] > charCount[char]) {
-        canForm = false;
+    //比較是否可以滿足 設定變數來控制 必要時中斷迴圈(一個不滿足就是不能完成)
+    let canComplete = true;
+    for (let key in wordCount) {
+      if (!charsCount[key] || wordCount[key] > charsCount[key]) {
+        canComplete = false;
         break;
       }
     }
-
-    // 如果可以组成，累加单词长度
-    if (canForm) {
-      totalLength += word.length;
+    //增加長度
+    if (canComplete) {
+      length += item.length;
     }
   });
-
-  return totalLength;
+  return length;
 };
+console.log(countCharacters(["cat", "bt", "hat", "tree"], "atach"));
