@@ -1,13 +1,17 @@
 /**
  * @param {character[][]} board
  * @return {boolean}
- * 2025/9/30 還是偏難陣列追蹤 掌握度50%
+ * 2025/9/30 還是偏難陣列追蹤 掌握度70%
  */
 var isValidSudoku = function (board) {
-  // 使用三個 Set 陣列分別追蹤每行、每列、每個 3x3 方格
+  // 使用三個 Set 陣列分別追蹤每行、每列、每個 3x3 方格 第一次看到這種用法
+  // 等於創造9個set包裹在陣列中 利用set的不重複特性來解題
   const rows = Array.from({ length: 9 }, () => new Set());
   const cols = Array.from({ length: 9 }, () => new Set());
   const boxes = Array.from({ length: 9 }, () => new Set());
+
+  let set = new Set();
+  console.log(`output->set`, set);
 
   for (let row = 0; row < 9; row++) {
     for (let col = 0; col < 9; col++) {
@@ -16,10 +20,10 @@ var isValidSudoku = function (board) {
       // 跳過空格
       if (num === ".") continue;
 
-      // 計算屬於哪個 3x3 方格
+      // 計算屬於哪個 3x3 方格 序號0-8的3*#方格序號
       const blockIndex = Math.floor(row / 3) * 3 + Math.floor(col / 3);
-
-      // 檢查是否重複
+      console.log(`output->blockIndex`, blockIndex);
+      // 檢查是否重複 有重複就返回false
       if (
         rows[row].has(num) ||
         cols[col].has(num) ||
@@ -28,7 +32,7 @@ var isValidSudoku = function (board) {
         return false;
       }
 
-      // 加入 Set
+      // 若沒有被early return 返回就加入 Set
       rows[row].add(num);
       cols[col].add(num);
       boxes[blockIndex].add(num);
